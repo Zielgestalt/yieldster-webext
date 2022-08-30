@@ -1,5 +1,14 @@
 <script setup lang="ts">
-import { storageDemo } from '~/logic/storage'
+import { darkMode } from '~/logic/storage'
+
+const mode = computed(() => {
+  if (darkMode.value)
+    return 'dark'
+  else
+    return ''
+})
+
+const timekey = Math.floor(Date.now() / 1000)
 
 function openOptionsPage() {
   browser.runtime.openOptionsPage()
@@ -7,17 +16,24 @@ function openOptionsPage() {
 </script>
 
 <template>
-  <main class="w-[300px] px-4 py-5 text-center text-gray-700">
-    <Logo />
-    <div>Popup</div>
-    <p class="mt-2 opacity-50">
-      This is the popup page
-    </p>
-    <button class="btn mt-2" @click="openOptionsPage">
-      Open Options
-    </button>
-    <div class="mt-2">
-      <span class="opacity-50">Storage:</span> {{ storageDemo }}
+  <main :data-theme="mode">
+    <div class="container text-flow">
+      <div class="is-centered">
+        <Logo />
+      </div>
+      <div>
+        <Suspense>
+          <PopupDisplay :key="timekey" />
+        </Suspense>
+      </div>
     </div>
   </main>
 </template>
+
+<style scoped lang="scss">
+  main {
+    width: 357px;
+    min-height: 600px;
+    width: 100%;
+  }
+</style>

@@ -1,0 +1,31 @@
+body {
+  --scrollbarBG: var(--clr-grey-6);
+  --thumbBG: var(--clr-primary);
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG);
+    border-radius: 6px;
+    border: 3px solie var(--scrollbarBG);
+  }
+}
+
+.icon,
+.logo {
+  display: inline-block;
+  width: 32px;
+
+  svg {
+    width: 100%;
+  }
+}

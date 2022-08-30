@@ -1,0 +1,54 @@
+@import "./light";
+@import "./dark";
+
+body {
+  --color: var(--clr-grey-4);
+  --bg: var(--clr-grey-0);
+  --bg-hover: var(--clr-grey-1);
+  --link: var(--clr-primary);
+  --link-hover: var(--clr-primary-hover);
+  --link-inverse: var(--clr-white);
+  
+  --font-family: var(--ff-regular);
+  --fw: var(--fw-4);
+
+  --heading: var(--clr-grey-6);
+  --heading-fw: var(--fw-4);
+
+  --button-text: var(--clr-white);
+  --button-text-hover: var(--clr-white);
+  --button-bg: var(--clr-primary);
+  --button-bg-hover: var(--clr-primary-hover);
+
+  font-family: var(--font-family);
+  font-weight: var(--fw);
+
+  @include light;
+}
+
+[data-theme] {
+  @include light;
+}
+
+// Dark theme (Auto)
+// Automatically enabled if user has Dark mode enabled
+// @media only screen and (prefers-color-scheme: dark) {
+//   :root:not([data-theme="light"]) {
+//     color-scheme: dark;
+//     body {
+//       @include dark;
+//     }
+//   }
+// }
+
+// Dark theme (Forced)
+// Enabled if forced with data-theme="dark"
+[data-theme="dark"] {
+  @include dark;
+}
+
+
+[data-theme="primary"] {
+  --color: var(--clr-primary-inverse);
+  --bg: var(--clr-primary);
+}

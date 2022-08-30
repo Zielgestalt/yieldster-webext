@@ -1,0 +1,146 @@
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px,
+);
+
+// Viewports
+$viewports: (
+  // 'null' disable the viewport on a breakpoint
+  sm: 100%,
+  md: 100%,
+  lg: 100%,
+  xl: 1130px,
+  xxl: 1496px,
+);
+
+:root {
+  // Colors
+  --clr-primary: hsl(198,100%,44.5%);
+  --clr-primary-hover: hsl(198,100%,29.4%);
+  --clr-primary-focus: hsl(198,100%,29.4%);
+  --clr-primary-inverse: white;
+
+  --clr-secondary: hsl(48,100%,50%);
+  --clr-secondary-hover: hsl(46.1,100%,44.9%);
+  --clr-secondary-focus: hsl(46.1,100%,44.9%);
+  --clr-secondary-inverse: white;
+
+  --clr-tertiary: hsl(139.2,87.2%,43.7%);
+  --clr-tertiary-hover: hsl(137.8,86%,22.4%);
+  --clr-tertiary-focus: hsl(137.8,86%,22.4%);
+  --clr-tertiary-inverse: white;
+
+  --clr-light: white;
+  --clr-light-hover: white;
+  --clr-light-focus: white;
+  --clr-light-inverse: black;
+
+  --clr-dark: black;
+  --clr-dark-hover: black;
+  --clr-dark-focus: black;
+  --clr-dark-inverse: white;
+
+  --clr-grey: grey;
+  --clr-dark-hover: #333;
+  --clr-dark-focus: #333;
+  --clr-dark-inverse: grey;
+
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+
+  --clr-grey-0: hsl(0,3.4%,94.3%);
+  --clr-grey-1: hsl(0,0%,86.7%);
+  --clr-grey-2: hsl(0,0%,80%);
+  --clr-grey-3: hsl(60,0.4%,52.7%);
+  --clr-grey-4: hsl(0,0%,41%);
+  --clr-grey-5: hsl(0,0%,36%);
+  --clr-grey-6: hsl(0,0%,31%);
+  --clr-grey-7: hsl(0,0%,24%);
+  --clr-grey-8: hsl(0,0%,16%);
+  --clr-grey-9: hsl(0,0%,11%);
+
+  --clr-success: var(--clr-tertiary);
+  --clr-alert: #ea0000;
+  
+  // Font Sizes
+  --fs-0: 0.5rem;
+  --fs-1: 0.75rem;
+  --fs-2: 1rem;
+  --fs-3: 1.25rem;
+  --fs-4: 1.5rem;
+  --fs-5: 2rem;
+  --fs-6: 2.5rem;
+  --fs-7: 3rem;
+  --fs-8: 3.5rem;
+
+  --fsf-0: clamp(.75rem, 1.5vw, 1rem);
+  --fsf-1: clamp(1rem, 2vw, 1.75rem);
+  --fsf-2: clamp(2.25rem, 3vw, 3.5rem);
+  --fsf-3: clamp(3rem, 5vw, 5.375rem);
+
+  --fw-1: 100;
+  --fw-2: 200;
+  --fw-3: 300;
+  --fw-4: 400;
+  --fw-5: 500;
+  --fw-6: 600;
+  --fw-7: 700;
+  --fw-8: 800;
+  --fw-9: 900;
+
+  --font-sans: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  --font-serif: ui-serif, serif;
+  --font-mono: Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace, SF Mono, Monaco, Droid Sans Mono, Source Code Pro, monospace;
+
+  --ff-regular: "Roboto", sans-serif;
+  --ff-headline: "Roboto", sans-serif;
+
+  --lh-0: 1.1;
+  --lh-1: 1.25;
+  --lh-2: 1.375;
+  --lh-3: 1.5;
+  --lh-4: 1.75;
+  --lh-5: 2;
+
+  --ls-0: -.05em;
+  --ls-1: .025em;
+  --ls-2: .050em;
+  --ls-3: .075em;
+  --ls-4: .150em;
+  --ls-5: .500em;
+  --ls-6: .750em;
+  --ls-7: 1em;
+
+  --size-0: -.25rem;
+  --size-1: .25rem;
+  --size-2: .5rem;
+  --size-3: 1rem;
+  --size-4: 1.25rem;
+  --size-5: 1.5rem;
+  --size-6: 1.75rem;
+  --size-7: 2rem;
+  --size-8: 3rem;
+  --size-9: 4rem;
+  --size-10: 5rem;
+  --size-11: 7.5rem;
+  --size-12: 10rem;
+  --size-13: 15rem;
+  --size-14: 20rem;
+  --size-15: 30rem;
+
+  // Forms
+  --form-element-spacing-vertical: 0.75rem;
+  --form-element-spacing-horizontal: 1rem;
+  --form-element-background-color: var(--clr-white);
+  --form-element-border-width: 1px;
+  --form-element-border-color: var(--clr-grey-2);
+  --form-element-color: var(--clr-grey-5);
+  --form-element-active-border-color: var(--clr-grey-5);
+  --form-element-active-background-color: var(--clr-white);
+  --form-element-placeholder-color: var(--clr-grey-2);
+  --form-element-border-width: 1px;
+}

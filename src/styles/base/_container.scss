@@ -1,0 +1,23 @@
+  /**
+ * Container
+ */
+
+.container,
+.container-fluid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container {
+  max-width: 400px;
+}
+
+  /**
+ * Main
+ */
+
+ main {
+  padding: 2rem 0;
+  min-height: 100vh;
+ }

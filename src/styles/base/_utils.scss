@@ -1,0 +1,23 @@
+.text-flow {
+  & > *:not(.no-flow) + * {
+    margin-top: var(--size-3);
+  }
+
+  @for $i from 1 through 10 {
+    &.is-flow-#{$i} > *:not(.no-flow) + * {
+      margin-top: var(--size-#{$i});
+    }
+  }
+}
+
+.is-centered {
+  text-align: center;
+}
+
+.is-success {
+  color: var(--clr-success);
+}
+
+.is-danger {
+  color: var(--clr-alert);
+}

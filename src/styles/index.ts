@@ -1,2 +1,3 @@
-import './main.css'
-import 'virtual:windi.css'
+// import './main.css'
+import './styles.scss'
+// import 'virtual:windi.css'
