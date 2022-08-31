@@ -1,6 +1,6 @@
 {
-  "name": "yieldster-webext",
-  "displayName": "Yieldster WebExt",
+  "name": "yieldster-myvaults",
+  "displayName": "Yieldster MyVaults",
   "version": "0.0.1",
   "private": true,
   "packageManager": "pnpm@7.8.0",

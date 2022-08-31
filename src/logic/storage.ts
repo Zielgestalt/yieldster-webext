@@ -1,8 +1,7 @@
 import { useFetch } from '@vueuse/core'
 import { useStorageLocal } from '~/composables/useStorageLocal'
 
-export const wallet = useStorageLocal('wallet', '', { listenToStorageChanges: true })
-export const vaults = useStorageLocal('vaults', [], { listenToStorageChanges: true })
+export const wallet = useStorageLocal('wallet', null, { listenToStorageChanges: true })
 export const staging = useStorageLocal('staging', true, { listenToStorageChanges: true })
 export const darkMode = useStorageLocal('darkmode', true, { listenToStorageChanges: true })
 
@@ -32,6 +31,17 @@ const sleepUntil = async (f, timeoutMs) => {
       }
     }, 20)
   })
+}
+
+export function hasWallet() {
+  console.log('Wallet: ', wallet)
+  console.log('Wallet Value: ', wallet.value)
+  // if (wallet && (wallet.value !== null || wallet.value !== ''))
+  if (wallet.value == null || wallet.value === '')
+    return false
+
+  else
+    return true
 }
 
 export async function myVaults() {

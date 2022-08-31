@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { computedAsync } from '@vueuse/core'
-import { api, darkMode, staging, vaults, wallet } from '~/logic/storage'
+import { api, darkMode, hasWallet, staging, vaults, wallet } from '~/logic/storage'
+
+console.log('hasWallet: ', hasWallet())
 
 const downloads = computedAsync(async (onCancel) => {
   const abortController = new AbortController()
@@ -30,7 +32,6 @@ const mode = computed(() => {
         <Logo />
       </div>
       <!-- <div>Yieldster Extension options page</div> -->
-
       <label for="wallet">
         Your wallet address:
         <input id="wallet" v-model="wallet" name="wallet">

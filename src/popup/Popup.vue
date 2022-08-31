@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { darkMode } from '~/logic/storage'
+import { darkMode, hasWallet } from '~/logic/storage'
 
 const mode = computed(() => {
   if (darkMode.value)
@@ -21,10 +21,18 @@ function openOptionsPage() {
       <div class="is-centered">
         <Logo />
       </div>
-      <div>
+      <div v-if="hasWallet()">
         <Suspense>
           <PopupDisplay :key="timekey" />
         </Suspense>
+      </div>
+      <div v-else class="no-wallet text-flow">
+        <p>
+          Please enter a wallet address in the options page
+        </p>
+        <button class="btn mt-2" @click="openOptionsPage">
+          Open Options
+        </button>
       </div>
     </div>
   </main>
@@ -35,5 +43,15 @@ function openOptionsPage() {
     width: 357px;
     min-height: 600px;
     width: 100%;
+  }
+
+  .no-wallet {
+    padding: 2rem;
+    text-align: center;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 </style>
