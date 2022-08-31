@@ -40,7 +40,6 @@ function openOptionsPage() {
 
 <style scoped lang="scss">
   main {
-    width: 357px;
     min-height: 600px;
     width: 100%;
   }
